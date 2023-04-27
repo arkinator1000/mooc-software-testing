@@ -13,15 +13,24 @@ public class GettingStartedTest {
 
 //    UNCOMMENT THE CODE BELOW, AND FILL THE GAPS!
 
-//    @Test
-//    public void addFiveToZero() {
-//        int result = new GettingStarted().addFive(???);
-//        Assertions.assertEquals(???, result);
-//    }
-//
-//    @Test
-//    public void addFiveToMinus20() {
-//        int result = new GettingStarted().addFive(???);
-//        Assertions.assertEquals(????,result);
-//    }
+    @Test
+    public void addFiveToZero() {
+        int result = new GettingStarted().addFive(0);
+        Assertions.assertEquals(5, result);
+    }
+
+    @Test
+    public void addFiveToMinus20() {
+        int result = new GettingStarted().addFive(-20);
+        Assertions.assertEquals(-15,result);
+    }
+    
+    // Should have single test per method
+    // not a good idea to write a bunch of asserts in a single test
+    
+    @Test
+    public void addFiveToMinus99() {
+        int result = new GettingStarted().addFive(-99);
+        Assertions.assertEquals(-94,result);
+    }
 }
